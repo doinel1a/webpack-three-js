@@ -25,7 +25,8 @@
     "preview": "nodemon server.js"
   },
   "dependencies": {
-    "core-js": "^3.29.0"
+    "core-js": "^3.29.0",
+    "three": "^0.150.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
