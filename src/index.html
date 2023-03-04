@@ -45,28 +45,11 @@
       id="main"
       class="flex h-screen flex-col items-center justify-center bg-primary text-color"
     >
-      <h1 id="title" class="mb-4 text-4xl"></h1>
-      <section
-        class="container flex h-72 w-96 flex-col items-center justify-between rounded-xl border border-tertiary bg-secondary py-10"
-      >
-        <h2 id="counter" class="text-6xl">0</h2>
-        <div class="flex gap-x-5">
-          <button
-            id="increment"
-            type="button"
-            class="w-16 rounded-xl bg-accent-primary px-4 py-2 text-xl transition-colors hover:bg-accent-primary-state focus:bg-accent-primary-state"
-          >
-            + 1
-          </button>
-          <button
-            id="decrement"
-            type="button"
-            class="w-16 rounded-xl bg-accent-primary px-4 py-2 text-xl transition-colors hover:bg-accent-primary-state focus:bg-accent-primary-state"
-          >
-            - 1
-          </button>
-        </div>
-      </section>
+      <h1
+        id="title"
+        class="absolute cursor-default select-none rounded-xl bg-gray-800 bg-opacity-50 p-4 text-center text-2xl backdrop-blur-sm sm:text-3xl md:text-4xl"
+      ></h1>
+      <canvas id="canvas" class="h-full w-full"></canvas>
       <a id="github" title="" aria-label="" href="" class="github-corner">
         <svg
           width="80"
