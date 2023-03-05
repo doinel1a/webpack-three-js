@@ -45,12 +45,22 @@
       id="main"
       class="flex h-screen flex-col items-center justify-center bg-primary text-color"
     >
-      <h1
-        id="title"
-        class="absolute cursor-default select-none rounded-xl bg-gray-800 bg-opacity-50 p-4 text-center text-2xl backdrop-blur-sm sm:text-3xl md:text-4xl"
-      ></h1>
-      <canvas id="canvas" class="h-full w-full"></canvas>
-      <a id="github" title="" aria-label="" href="" class="github-corner">
+      <div
+        class="absolute z-[1] cursor-default rounded-xl bg-gray-800 bg-opacity-50"
+      >
+        <h1
+          id="title"
+          class="select-none p-4 text-center text-2xl sm:text-3xl md:text-4xl"
+        ></h1>
+      </div>
+      <canvas id="canvas" class="z-[0] h-full w-full"></canvas>
+      <div
+        id="loader"
+        class="absolute z-[5] flex h-full w-full items-center justify-center bg-secondary"
+      >
+        <span class="loader"></span>
+      </div>
+      <a id="github" title="" aria-label="" href="" class="github-corner z-[4]">
         <svg
           width="80"
           height="80"

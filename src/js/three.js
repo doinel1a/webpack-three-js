@@ -11,8 +11,15 @@ const device = {
   pixelRatio: window.devicePixelRatio
 };
 
+const rootStyle = document.querySelector(':root');
+
 export default class Three {
-  constructor(canvas) {
+  constructor(canvas, loader) {
+    rootStyle.style.setProperty('--bg-size', '5%');
+
+    this.canvas = canvas;
+    this.loader = loader;
+
     this.scene = new T.Scene();
 
     this.camera = new T.PerspectiveCamera(
@@ -25,7 +32,7 @@ export default class Three {
     this.scene.add(this.camera);
 
     this.renderer = new T.WebGLRenderer({
-      canvas,
+      canvas: this.canvas,
       alpha: true,
       antialias: true,
       preserveDrawingBuffer: true
@@ -33,9 +40,12 @@ export default class Three {
     this.renderer.setSize(device.width, device.height);
     this.renderer.setPixelRatio(Math.min(device.pixelRatio, 2));
 
-    this.textureLoader = new T.TextureLoader();
+    this.textureLoadingManager = new T.LoadingManager();
+    this.textureLoader = new T.TextureLoader(this.textureLoadingManager);
 
     this.clock = new T.Clock();
+
+    rootStyle.style.setProperty('--bg-size', '10%');
 
     this.setLights();
     this.setGeometry();
@@ -55,6 +65,8 @@ export default class Three {
     this.bottomPointLight = new T.PointLight(0xb2ff, 2);
     this.bottomPointLight.position.set(0, -2.5, -0.5);
     this.scene.add(this.bottomPointLight);
+
+    rootStyle.style.setProperty('--bg-size', '10%');
   }
 
   setGeometry() {
@@ -70,6 +82,21 @@ export default class Three {
     this.sphereMaterial.metalness = 2;
     this.sphereMaterial.metalnessMap = this.textureLoader.load(metalnessMap);
     this.sphereMaterial.normalMap = this.textureLoader.load(normalMap);
+
+    this.textureLoadingManager.onProgress = (
+      urlOfLastItemLoaded,
+      itemsLoaded,
+      itemsTotal
+    ) => {
+      const progress = (itemsLoaded / itemsTotal) * 100;
+      rootStyle.style.setProperty('--bg-size', `${progress}%`);
+    };
+
+    this.textureLoadingManager.onLoad = () => {
+      setTimeout(() => {
+        this.loader.style.display = 'none';
+      }, 500);
+    };
 
     this.sphereMesh = new T.Mesh(this.sphereGeometry, this.sphereMaterial);
     this.scene.add(this.sphereMesh);

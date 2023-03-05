@@ -18,5 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   githubCorner.setAttribute('aria-label', githubCornerTitle);
   githubCorner.setAttribute('href', githubRepoUrl);
 
-  new Three(document.querySelector('#canvas'));
+  new Three(
+    document.querySelector('#canvas'),
+    document.querySelector('#loader')
+  );
 });
