@@ -1,8 +1,8 @@
 {
   "lang": "en-EN",
-  "name": "VanillaJS — Starter",
-  "short_name": "VanillaJS — Starter",
-  "description": "Start a Vanilla JavaScript App, SPA, landing page or website using Webpack, Babel, Core-JS, SASS / SCSS, Tailwind CSS and much more, in just 30 seconds.",
+  "name": "Webpack Vanilla ThreeJS — Starter",
+  "short_name": "Webpack Vanilla ThreeJS — Starter",
+  "description": "Start a Vanilla ThreeJS Web App, SPA, website or landing page using JavaScript, Tailwind CSS, ESLint, Husky, Webpack, Babel and much more, in JUST 30 seconds, without the hassle of setting up your dev environment.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
