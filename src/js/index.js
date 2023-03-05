@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   githubCorner.setAttribute('title', githubCornerTitle);
   githubCorner.setAttribute('aria-label', githubCornerTitle);
   githubCorner.setAttribute('href', githubRepoUrl);
+});
 
+window.addEventListener('load', () => {
   new Three(
     document.querySelector('#canvas'),
     document.querySelector('#loader')
