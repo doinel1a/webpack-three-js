@@ -1,10 +1,10 @@
 [node]: https://nodejs.org/en
 [yarn]: https://yarnpkg.com
-[demo]: https://vanilla-js-starter.d1a.app
-[license]: https://github.com/doinel1a/vanilla-js-starter/blob/main/LICENSE
-[code-of-conduct]: https://github.com/doinel1a/vanilla-js-starter/blob/main/CODE_OF_CONDUCT.md
-[issues]: https://github.com/doinel1a/vanilla-js-starter/issues
-[pulls]: https://github.com/doinel1a/vanilla-js-starter/pulls
+[demo]: https://wp-vanilla-three-js-starter.d1a.app
+[license]: https://github.com/doinel1a/wp-vanilla-three-js-starter/blob/main/LICENSE
+[code-of-conduct]: https://github.com/doinel1a/wp-vanilla-three-js-starter/blob/main/CODE_OF_CONDUCT.md
+[issues]: https://github.com/doinel1a/wp-vanilla-three-js-starter/issues
+[pulls]: https://github.com/doinel1a/wp-vanilla-three-js-starter/pulls
 [browserslist]: https://browsersl.ist/#q=last+3+versions%2C%3E+0.2%25%2C+not+dead
 [graphviz]: https://www.graphviz.org/download
 [commitlint]: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
@@ -15,7 +15,7 @@
 [wp-react-ts-repo]: https://github.com/doinel1a/react-ts-starter
 [wp-react-js-repo]: ''
 [wp-vanilla-ts-repo]: ''
-[wp-vanilla-js-repo]: https://github.com/doinel1a/vanilla-js-starter
+[wp-vanilla-js-repo]: https://github.com/doinel1a/wp-vanilla-three-js-starter
 [react-icon]: https://skillicons.dev/icons?i=react
 [ts-icon]: https://skillicons.dev/icons?i=ts
 [js-icon]: https://skillicons.dev/icons?i=js
@@ -26,13 +26,13 @@
 [opera-icon]: https://github.com/alrra/browser-logos/blob/main/src/opera/opera_64x64.png
 [safari-icon]: https://github.com/alrra/browser-logos/blob/main/src/safari/safari_64x64.png
 
-# Webpack Vanilla JavaScript — Starter template
+# Webpack Vanilla Three JavaScript — Starter template
 
-Are you looking for a way to supercharge your development experience and build stunning web applications with ease? You are in the right place!
+Are you looking for a way to supercharge your development experience and build stunning **Three js** web applications with ease? You are in the right place!
 This development starter template is the ultimate solution to help you getting started on your project in no time, without the hassle of setting up and configuring your development environment from scratch each time you start working.
-This template is ideal for front-end developers who want to build modern, fast and reliable web applications with the latest cutting edge technologies such as **JavaScript**, **Tailwind CSS**, **ESLint**, **Prettier**, **Husky**, **Webpack**, **Babel**, **Core-JS** and much more!
+This template is ideal for front-end developers who want to build modern, fast and reliable **webgl** web applications with the latest cutting edge technologies such as **Three JS**, **JavaScript**, **Tailwind CSS**, **ESLint**, **Prettier**, **Husky**, **Webpack**, **Babel**, **Core-JS** and much more!
 
-[Demo][demo] — [Bug(label: bug)][issues] — [Feature(label: enhancement)][issues]
+**[Demo][demo]** | **[Bug(label: bug)][issues]** | **[Feature(label: enhancement)][issues]**
 
 ## :bookmark: Table of contents
 
@@ -50,6 +50,7 @@ This template is ideal for front-end developers who want to build modern, fast a
 
 This development starter template comes fully equipped with all the necessary tools to create modern, responsive and fast web applications, including:
 
+- **Three JS**: A JavaScript library built on top of **WebGL** that provides an abstraction layer for rendering interactive 3D and 2D scenes in the web browser;
 - **JavaScript**: A programming language used primarily for creating dynamic web content and interactive user interfaces;
 - **Tailwind CSS**: A utility-first CSS framework that provides predefined classes for common styles and layout patterns, allowing quick styling without writing custom CSS;
 - **SASS**: A CSS preprocessor that adds features such as variables, nesting, and mixins to CSS, making it easier to write and maintain large CSS codebases;
@@ -71,7 +72,7 @@ And with tools that enhance the development experience:
 - **Husky**: A Git hook manager that allows easy set up and configuration of Git hooks, which are scripts that run at certain points in the Git workflow;
 - **Commitlint**: A tool for enforcing commit message conventions in Git repositories, helping to ensure consistent and informative commit messages;
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
 
 ---
 
@@ -89,9 +90,10 @@ And with tools that enhance the development experience:
 
   - click **"Use this template"** button <br/> or
   - click the **"Fork"** button <br/> or
-  - **clone** the repository `git clone https://github.com/doinel1a/vanilla-js-starter/ YOUR-PROJECT-NAME`;
+  - **clone** the repository through your terminal: <br />
+    `git clone https://github.com/doinel1a/wp-vanilla-three-js-starter/ YOUR-PROJECT-NAME`;
 
-- Open the terminal or the code editor, to the path your project is located, and run:
+- Open your terminal or your code editor, to the path your project is located, and run:
 
   - With **NPM** :
     - To **install** the dependencies: `npm install`;
@@ -112,27 +114,32 @@ And with tools that enhance the development experience:
     - With **Yarn** :
       `yarn playwright install`;
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
 
 ---
 
 ## :arrows_clockwise: Versions
 
-**Webpack** and **Vite** are popular build tools for web applications, but they differ in terms of build speed and configuration. Vite is faster than Webpack, especially for large projects, and has a more "zero-config" approach. Both tools support **SWC** as a compiler, but Vite is optimized for it out of the box, making it even faster. If you prioritize speed and ease of use, go with the Vite versions. If you need more control over your build process, choose the Webpack version.
+This starter template comes in 2 differente technologies: **Webpack** and **Vite**, the most popular development tools for web applications. <br />
+_Both tools support **SWC**, a **Rust-based compiler**; Vite is optimized for it out of the box._
 
-### Vite:
+### Vite (SWC compiler)
 
-|                           React - TypeScript                            |                           React - JavaScript                            |     Vanilla TypeScript      |     Vanilla JavaScript      |
-| :---------------------------------------------------------------------: | :---------------------------------------------------------------------: | :-------------------------: | :-------------------------: |
-| ![React][react-icon] & ![TS][ts-icon] <br /> [Repo][vite-react-ts-repo] | ![React][react-icon] & ![JS][js-icon] <br /> [Repo][vite-react-js-repo] | ![TS][ts-icon] <br /> Soon! | ![JS][js-icon] <br /> Soon! |
+Is a simple and fast solution thanks to it's "zero-config" approach that is optimized for modern web development workflows and offers a smoother development experience.
 
-### Webpack:
+|                   React - TypeScript                   |                   React - JavaScript                   |       Vanilla TypeScript        |       Vanilla JavaScript        |
+| :----------------------------------------------------: | :----------------------------------------------------: | :-----------------------------: | :-----------------------------: |
+| ![React][react-icon] & ![TS][ts-icon] <br /> **Soon!** | ![React][react-icon] & ![JS][js-icon] <br /> **Soon!** | ![TS][ts-icon] <br /> **Soon!** | ![JS][js-icon] <br /> **Soon!** |
 
-|                          React - TypeScript                           |                 React - JavaScript                 |     Vanilla TypeScript      |       Vanilla JavaScript        |
-| :-------------------------------------------------------------------: | :------------------------------------------------: | :-------------------------: | :-----------------------------: |
-| ![React][react-icon] & ![TS][ts-icon] <br /> [Repo][wp-react-ts-repo] | ![React][react-icon] & ![JS][js-icon] <br /> Soon! | ![TS][ts-icon] <br /> Soon! | ![JS][js-icon] <br /> This repo |
+### Webpack (Babel compiler)
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+Is a more mature and flexible solution, capable of handling complex configurations and integrating with various tools and plugins.
+
+|                   React - TypeScript                   |                   React - JavaScript                   |       Vanilla TypeScript        |     Vanilla JavaScript      |
+| :----------------------------------------------------: | :----------------------------------------------------: | :-----------------------------: | :-------------------------: |
+| ![React][react-icon] & ![TS][ts-icon] <br /> **Soon!** | ![React][react-icon] & ![JS][js-icon] <br /> **Soon!** | ![TS][ts-icon] <br /> **Soon!** | ![JS][js-icon] <br /> **/** |
+
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
 
 ---
 
@@ -144,7 +151,7 @@ The provided configuration ensures **92.3 %** of **global browsers** , especia
 | :---------------------------: | :------------------------------: | :--------------------------: | :------------------: | ---------------------------- |
 | ![Google Chrome][chrome-icon] | ![Mozilla Firefox][firefox-icon] | ![Microsoft Edge][edge-icon] | ![Opera][opera-icon] | ![Apple Safari][safari-icon] |
 
-In order to support a wider percentage of browsers and meet your project requirements, update the `./.browserslistrc` configuration file:
+**\*** In order to support a wider percentage of browsers and meet your project requirements, update the `./.browserslistrc` configuration file:
 
 1. `last 3 versions`: the versions of each browser;
 2. `> 0.2%`: the browsers usage statistics;
@@ -152,9 +159,9 @@ In order to support a wider percentage of browsers and meet your project require
 
 You can play with the configurations [here][browserslist] and check in real-time the **global browsers support** .
 
-_The more versions to support, larger JS and CSS bundles size will be._
+**\* The more versions to support, larger JS and CSS bundles size will be.**
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
 
 ---
 
@@ -180,7 +187,7 @@ Please check the [**contributing guide**][code-of-conduct] for details on how to
 4.  Open a new [pull request][pulls];
 5.  Once your pull request has been merged, you can delete the branch;
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
 
 ---
 
@@ -190,7 +197,7 @@ All logos and trademarks are the property of their respective owners.
 Everything else is distributed under the **MIT License** .  
 See the [LICENSE][license] file for more informations.
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
 
 ---
 
@@ -198,7 +205,8 @@ See the [LICENSE][license] file for more informations.
 
 Special thanks to:
 
+- [Dimitrios Savva](https://polyhaven.com/all?a=Dimitrios%20Savva) & [Rob Tuytel](https://polyhaven.com/all?a=Rob%20Tuytel) for the [textures](https://polyhaven.com/a/metal_grate_rusty);
 - [alrra](https://github.com/alrra) for [browser-logos](https://github.com/alrra/browser-logos);
 - [tandpfun](https://github.com/tandpfun) for [skill-icons](https://github.com/tandpfun/skill-icons);
 
-[Back to:arrow_up:](#webpack-vanilla-javascript--starter-template "Back to 'Table of contents' section")
+[Back to:arrow_up:](#webpack-vanilla-three-javascript--starter-template "Back to 'Table of contents' section")
