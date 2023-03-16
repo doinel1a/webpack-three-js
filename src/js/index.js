@@ -20,8 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', () => {
-  new Three(
-    document.querySelector('#canvas'),
-    document.querySelector('#loader')
-  );
+  new Three(document.querySelector('#canvas'));
 });
