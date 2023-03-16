@@ -56,6 +56,11 @@ module.exports = () => {
           generator: {
             filename: 'fonts/[name][ext][query]'
           }
+        },
+        {
+          test: /\.(glsl|vs|fs|vert|frag)$/i,
+          exclude: '/node_modules/',
+          use: ['raw-loader', 'glslify-loader']
         }
       ]
     },
