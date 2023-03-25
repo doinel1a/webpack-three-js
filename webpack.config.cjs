@@ -5,7 +5,9 @@ const css = require('mini-css-extract-plugin');
 const fileManager = require('filemanager-webpack-plugin');
 const partytown = require('@builder.io/partytown/utils');
 
-const meta = require('./_config');
+const _config = require('./_config');
+
+const PORT = _config.server.port;
 
 module.exports = () => {
   const isProduction = process.env.NODE_ENV === 'production';
@@ -67,13 +69,13 @@ module.exports = () => {
     plugins: [
       new html({
         meta: {
-          title: meta.title,
-          'application-name': meta.title,
-          description: meta.description,
-          keywords: meta.keywords,
-          'apple-mobile-web-app-title': meta.title
+          title: _config.meta.title,
+          'application-name': _config.meta.title,
+          description: _config.meta.description,
+          keywords: _config.meta.keywords,
+          'apple-mobile-web-app-title': _config.meta.title
         },
-        title: meta.title,
+        title: _config.meta.title,
         icon192: isProduction
           ? '/favicon/favicon-192.png'
           : '/assets/favicon/favicon-192.png',
@@ -135,6 +137,7 @@ module.exports = () => {
       },
       hot: true,
       server: 'http',
+      port: PORT,
       historyApiFallback: true
     },
     devtool: isProduction ? false : 'source-map'

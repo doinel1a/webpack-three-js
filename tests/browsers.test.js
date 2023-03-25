@@ -2,7 +2,10 @@
 // @ts-check
 const { test } = require('@playwright/test');
 
+const HOST = 'http://localhost';
+const PORT = 3000;
+
 test('Test browsers', async ({ page }) => {
-  await page.goto('http://127.0.0.1:8080');
+  await page.goto(`${HOST}:${PORT}`);
   await page.pause();
 });
