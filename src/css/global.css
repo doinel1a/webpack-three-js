@@ -16,6 +16,12 @@
   --bg-size: 0%;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 .loader {
   @apply relative inline-block text-3xl text-color md:text-4xl lg:text-5xl;
 }
