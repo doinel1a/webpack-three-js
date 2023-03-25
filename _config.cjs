@@ -1,7 +1,7 @@
 module.exports = {
-  title: 'Webpack Vanilla ThreeJS — Starter',
+  title: 'Webpack ThreeJS — Template',
   description:
-    'Start a Vanilla ThreeJS Web App, SPA, website or landing page using JavaScript, Tailwind CSS, ESLint, Husky, Webpack, Babel and much more, in JUST 30 seconds, without the hassle of setting up your dev environment.',
+    'Template designed for quickly bootstrapping a Three.JS Web App, SPA, website or landing page with Webpack, Babel, TailwindCSS, ESLint, Husky and much more in just 30 seconds',
   keywords: `
     three, threejs, three-js, webgl, 3D, configurator, 3D configurator, web3D
     javascript, js, vanilla-javascript, vanilla-js, 
