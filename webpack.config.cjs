@@ -5,7 +5,7 @@ const css = require('mini-css-extract-plugin');
 const fileManager = require('filemanager-webpack-plugin');
 const partytown = require('@builder.io/partytown/utils');
 
-const _config = require('./_config');
+const _config = require('./_config.cjs');
 
 const PORT = _config.server.port;
 
@@ -68,14 +68,8 @@ module.exports = () => {
     },
     plugins: [
       new html({
-        meta: {
-          title: _config.meta.title,
-          'application-name': _config.meta.title,
-          description: _config.meta.description,
-          keywords: _config.meta.keywords,
-          'apple-mobile-web-app-title': _config.meta.title
-        },
-        title: _config.meta.title,
+        title: `${_config.meta.title}`,
+        ogImmage: isProduction ? '/og.jpg' : '/assets/og.jpg',
         icon192: isProduction
           ? '/favicon/favicon-192.png'
           : '/assets/favicon/favicon-192.png',
@@ -84,6 +78,20 @@ module.exports = () => {
           : '/assets/favicon/favicon-512.png',
         manifest: isProduction ? '/app.webmanifest' : '/assets/app.webmanifest',
         template: getDirectory('src/index.html'),
+        meta: {
+          title: _config.meta.title,
+          'application-name': _config.meta.title,
+          description: _config.meta.description,
+          keywords: _config.meta.keywords,
+          'og:title': _config.meta.title,
+          'og:url': 'https://webpack-three-js.d1a.app',
+          'twitter:domain': 'webpack-three-js.d1a.app',
+          'og:description': _config.meta.description,
+          'twitter:title': _config.meta.title,
+          'twitter:url': 'https://webpack-three-js.d1a.app',
+          'twitter:description': _config.meta.description,
+          'apple-mobile-web-app-title': _config.meta.title
+        },
         minify: {
           collapseWhitespace: true,
           keepClosingSlash: false,
@@ -112,6 +120,14 @@ module.exports = () => {
               copy: [
                 {
                   source: getDirectory('src/assets/app.webmanifest'),
+                  destination: 'dist/'
+                }
+              ]
+            },
+            {
+              copy: [
+                {
+                  source: getDirectory('src/assets/og.jpg'),
                   destination: 'dist/'
                 }
               ]
