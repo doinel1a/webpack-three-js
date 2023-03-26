@@ -10,8 +10,8 @@
   --secondary: #171717; /* neutral-900 */
   --tertiary: #404040; /* neutral-700 */
   --color: #f3f3f3;
-  --accent-primary: #22d3ee; /* cyan-400 */
-  --accent-primary-state: #06b6d4; /* cyan-500 */
+  --accent-primary: #2563eb; /* blue-600 */
+  --accent-primary-state: #1d4ed8; /* blue-700 */
 
   --bg-size: 0%;
 }
