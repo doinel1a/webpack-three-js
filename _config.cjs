@@ -4,6 +4,7 @@ module.exports = {
     port: 3000
   },
   meta: {
+    domain: 'webpack-three-js.d1a.app',
     title: 'Webpack ThreeJS — Template',
     description:
       'Template designed for quickly bootstrapping a Three.JS Web App, SPA, website or landing page with Webpack, Babel, TailwindCSS, ESLint, Husky and much more in just 30 seconds',
