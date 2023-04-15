@@ -77,6 +77,7 @@ module.exports = () => {
           ? '/favicon/favicon-512.png'
           : '/assets/favicon/favicon-512.png',
         manifest: isProduction ? '/app.webmanifest' : '/assets/app.webmanifest',
+        sitemap: isProduction ? '/sitemap.xml' : '/assets/sitemap.xml',
         template: getDirectory('src/index.html'),
         meta: {
           title: _config.meta.title,
@@ -128,6 +129,14 @@ module.exports = () => {
               copy: [
                 {
                   source: getDirectory('src/assets/og.jpg'),
+                  destination: 'dist/'
+                }
+              ]
+            },
+            {
+              copy: [
+                {
+                  source: getDirectory('src/assets/sitemap.xml'),
                   destination: 'dist/'
                 }
               ]
