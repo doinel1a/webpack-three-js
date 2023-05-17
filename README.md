@@ -48,7 +48,7 @@ It's ideal for front-end engineers who want to build modern, fast and reliable *
   - **[PNPM][pnpm]** `npm install --global pnpm` <br /> or
   - **[Yarn][yarn]** `npm install --global yarn`
 
-<br />
+### Start developing:
 
 - Get the repository:
   - click **"Use this template"** &nbsp; or &nbsp; **"Fork"** button <br /> alternately
@@ -91,7 +91,7 @@ And with tools that enhance the development experience:
 
 ## :arrows_clockwise: Versions
 
-This repository comes configured with the 2 industry standards for development tools: **Webpack** and **Vite**. <br />
+This repository comes configured with 2 of the industry standards for development tools: **Webpack** and **Vite**. <br />
 Both tools support **SWC (Speedy Web Compiler)**, a **Rust-based compiler**; Vite is optimized for it out of the box.
 
 ### Vite (SWC compiler)
@@ -116,7 +116,7 @@ Is more a flexible solution, capable of handling complex configurations.
 
 ## :globe_with_meridians: Browsers support
 
-The provided configuration ensures **92.3 %** of these browsers.
+The provided configuration ensures **92.3%** coverage for all browsers, in particular of the following:
 
 |            Chrome             |             Firefox              |             Edge             |        Opera         | Safari                       |
 | :---------------------------: | :------------------------------: | :--------------------------: | :------------------: | ---------------------------- |
@@ -144,7 +144,7 @@ Please check the [**contributing guide**][code-of-conduct] for details on how to
 
 ### How to contribute:
 
-1.  **[Get started](#computer-getting-started "Go to 'Getting started' section")**;
+1.  **[Get started](#computer-getting-started "Go to 'Getting started' section");**
 2.  **For a new feature:**
     1.  Create a new branch: `git checkout -b feat/NEW-FEATURE`;
     2.  Add your changes to the staging area: `git add PATH/TO/FILENAME.EXTENSION`;
@@ -155,7 +155,7 @@ Please check the [**contributing guide**][code-of-conduct] for details on how to
     2.  Add your changes to the staging area: `git add PATH/TO/FILENAME.EXTENSION`;
     3.  Commit your changes: `git commit -m "fix: BUG FIX"`;
     4.  Push your new branch: `git push origin fix/BUG-FIX`;
-4.  **Open a new [pull request][pulls]**;
+4.  **Open a new [pull request][pulls];**
 
 [Back to :arrow_up:](#webpack-three-js--template "Back to 'Table of contents' section")
 
@@ -164,7 +164,7 @@ Please check the [**contributing guide**][code-of-conduct] for details on how to
 ## :bookmark_tabs: License
 
 All logos and trademarks are the property of their respective owners.  
-Everything else is distributed under the **MIT License** .  
+Everything else is distributed under the **MIT License**.  
 See the [LICENSE][license] file for more informations.
 
 [Back to :arrow_up:](#webpack-three-js--template "Back to 'Table of contents' section")
